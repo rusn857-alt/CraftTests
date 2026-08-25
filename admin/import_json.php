@@ -21,11 +21,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
     $testTitle = trim($_POST['test_title'] ?? '');
     $testDescription = trim($_POST['test_description'] ?? '');
     $jsonData = trim($_POST['json_data'] ?? '');
+    $autoTitle = isset($_POST['auto_title']) && $_POST['auto_title'] == '1';
     
-    if (empty($testTitle)) {
-        $message = 'Введите название теста';
-        $messageType = 'danger';
-    } elseif (empty($jsonData)) {
+    if (empty($jsonData)) {
         $message = 'Введите JSON данные';
         $messageType = 'danger';
     } else {
@@ -36,7 +34,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
                 throw new Exception('Ошибка парсинга JSON: ' . json_last_error_msg());
             }
             
-            if (!is_array($data) || empty($data)) {
+            // Проверяем структуру: есть ли объект test
+            if (isset($data['test']) && isset($data['questions'])) {
+                // Новый формат с объектом test
+                $testData = $data['test'];
+                $questions = $data['questions'];
+                
+                // Если auto_title включен или поле title пустое, берем из JSON
+                if ($autoTitle || empty($testTitle)) {
+                    $testTitle = $testData['title'] ?? 'Импортированный тест';
+                }
+                
+                // Добавляем описание из JSON если есть
+                if (empty($testDescription) && isset($testData['description'])) {
+                    $testDescription = $testData['description'];
+                }
+            } else {
+                // Старый формат - массив вопросов
+                $questions = $data;
+                if (empty($testTitle)) {
+                    $testTitle = 'Импортированный тест';
+                }
+            }
+            
+            if (empty($testTitle)) {
+                $message = 'Введите название теста или включите авто-определение';
+                $messageType = 'danger';
+                throw new Exception('Название теста не указано');
+            }
+            
+            if (!is_array($questions) || empty($questions)) {
                 throw new Exception('JSON должен содержать массив вопросов');
             }
             
@@ -85,14 +112,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
                 'number' => 'number'
             ];
             
-            foreach ($data as $index => $item) {
-                // Проверяем наличие объекта question
-                if (!isset($item['question'])) {
-                    $skippedQuestions++;
-                    continue;
+            foreach ($questions as $index => $item) {
+                // Поддержка двух форматов: с объектом question и без
+                if (isset($item['question'])) {
+                    $question = $item['question'];
+                    $options = $item['allOptions'] ?? [];
+                    $summary = $item['summary'] ?? [];
+                } else {
+                    // Старый формат
+                    $question = $item;
+                    $options = $item['allOptions'] ?? $item['options'] ?? [];
+                    $summary = $item['summary'] ?? [];
                 }
                 
-                $question = $item['question'];
                 $text = trim($question['text'] ?? '');
                 
                 // Пропускаем пустые или служебные вопросы
@@ -104,21 +136,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
                 // Определяем тип вопроса
                 $type = $typeMapping[$question['type'] ?? 'radio'] ?? 'single';
                 
-                // Получаем варианты ответов из allOptions
-                $options = $item['allOptions'] ?? [];
-                
                 // Для single и multiple проверяем наличие вариантов
                 if (in_array($type, ['single', 'multiple']) && empty($options)) {
                     $skippedQuestions++;
                     continue;
                 }
                 
-                // Получаем баллы из summary
+                // Получаем баллы из summary или из первого варианта
                 $points = 1;
-                if (isset($item['summary']['maxPossibleScore'])) {
-                    $points = (float)$item['summary']['maxPossibleScore'];
-                    if ($points <= 0) $points = 1;
+                if (!empty($summary) && isset($summary['maxPossibleScore'])) {
+                    $points = (float)$summary['maxPossibleScore'];
+                } elseif (!empty($options) && isset($options[0]['score'])) {
+                    $points = (float)$options[0]['score'];
                 }
+                if ($points <= 0) $points = 1;
                 
                 // Создание вопроса
                 $db->query(
@@ -137,7 +168,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
                         if (empty($optionText)) continue;
                         
                         // Определяем правильность ответа
-                        // Используем поле isCorrect или id (1 = правильный)
                         $isCorrect = 0;
                         if (isset($option['isCorrect'])) {
                             $isCorrect = $option['isCorrect'] ? 1 : 0;
@@ -360,10 +390,24 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
         .form-row {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
         
         .form-row .form-group {
             flex: 1;
+            min-width: 150px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 28px;
+        }
+        
+        .checkbox-group label {
+            font-weight: 400;
+            cursor: pointer;
         }
         
         .alert {
@@ -396,6 +440,10 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                 gap: 0;
             }
             
+            .checkbox-group {
+                padding-top: 0;
+            }
+            
             .import-container {
                 padding: 15px;
             }
@@ -426,6 +474,7 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                 <ul>
                     <li><a href="index.php">📊 Главная</a></li>
                     <li><a href="tests.php">📝 Тесты</a></li>
+                    <li><a href="results.php">📈 Результаты</a></li>
                     <li><a href="import_json.php" class="active">📥 Импорт JSON</a></li>
                 </ul>
             </div>
@@ -449,9 +498,9 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                         <form method="POST" id="importForm">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="test_title">Название теста *</label>
+                                    <label for="test_title">Название теста</label>
                                     <input type="text" id="test_title" name="test_title" class="form-control" 
-                                           placeholder="Введите название теста" required 
+                                           placeholder="Оставьте пустым для авто-определения" 
                                            value="<?php echo isset($_POST['test_title']) ? htmlspecialchars($_POST['test_title']) : ''; ?>">
                                 </div>
                                 <div class="form-group">
@@ -459,6 +508,12 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                                     <input type="text" id="test_description" name="test_description" class="form-control" 
                                            placeholder="Краткое описание (необязательно)"
                                            value="<?php echo isset($_POST['test_description']) ? htmlspecialchars($_POST['test_description']) : ''; ?>">
+                                </div>
+                                <div class="form-group checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="auto_title" value="1" checked>
+                                        Авто-определение названия из JSON
+                                    </label>
                                 </div>
                             </div>
                             
@@ -468,7 +523,9 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                                           placeholder='Вставьте JSON данные теста здесь...' 
                                           required><?php echo isset($_POST['json_data']) ? htmlspecialchars($_POST['json_data']) : ''; ?></textarea>
                                 <div class="help-text">
-                                    💡 Вставьте JSON массив с вопросами. Каждый вопрос должен содержать объект <code>question</code> и массив <code>allOptions</code>.
+                                    💡 Поддерживаются два формата:<br>
+                                    1. <code>{"test": {...}, "questions": [...]}</code> - с объектом test<br>
+                                    2. <code>[...]</code> - массив вопросов<br>
                                     В options: <code>isCorrect</code> (true/false) или <code>id</code> (1 - правильный, 0 - неправильный).
                                 </div>
                             </div>
@@ -500,6 +557,10 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                                         <div class="number" id="totalOptions">0</div>
                                         <div class="label">Всего вариантов</div>
                                     </div>
+                                    <div class="stat-item" style="grid-column: span 2;">
+                                        <div class="number" id="testTitleFromJson" style="font-size: 16px; color: #007bff;">—</div>
+                                        <div class="label">Название теста из JSON</div>
+                                    </div>
                                 </div>
                             </div>
                             
@@ -511,29 +572,30 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                         </form>
                         
                         <div class="format-example">
-                            <strong>📌 Ваш формат JSON:</strong>
-                            <pre>[
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Текст вопроса?"
-    },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "allOptions": [
-      {"id": "0", "text": "Неправильный ответ", "score": 0, "isCorrect": false},
-      {"id": "1", "text": "Правильный ответ", "score": 1, "isCorrect": true}
-    ]
-  }
-]</pre>
+                            <strong>📌 Новый формат JSON (с объектом test):</strong>
+                            <pre>{
+  "test": {
+    "id": "6a85b169eb614656728e11d5",
+    "title": "Название теста",
+    "totalQuestions": 23,
+    "totalPossibleScore": 32
+  },
+  "questions": [
+    {
+      "question": {
+        "type": "radio",
+        "text": "Текст вопроса?"
+      },
+      "allOptions": [
+        {"id": "0", "text": "Неправильный ответ", "isCorrect": false},
+        {"id": "1", "text": "Правильный ответ", "isCorrect": true}
+      ]
+    }
+  ]
+}</pre>
                             <p style="margin-top: 10px; font-size: 13px; color: #666;">
-                                ⚠️ Вопросы с текстом "ID Пользователя" или "ID не найден" будут автоматически пропущены.
+                                ✅ Вопрос "ID Пользователя" автоматически пропускается.<br>
+                                ✅ Название теста автоматически определяется из поля <code>test.title</code>.
                             </p>
                         </div>
                     </div>
@@ -547,6 +609,8 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
             const jsonInput = document.getElementById('json_data');
             const previewBtn = document.getElementById('previewBtn');
             const statsPreview = document.getElementById('statsPreview');
+            const testTitleInput = document.getElementById('test_title');
+            const autoTitleCheckbox = document.querySelector('input[name="auto_title"]');
             
             // Функция обновления предпросмотра
             function updatePreview() {
@@ -560,8 +624,37 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                 try {
                     const data = JSON.parse(jsonData);
                     
-                    if (!Array.isArray(data) || data.length === 0) {
-                        showStats(0, 0, 0, 0, 0, 0);
+                    // Определяем формат и извлекаем данные
+                    let questions = [];
+                    let testTitle = '';
+                    let totalQuestions = 0;
+                    let totalPossibleScore = 0;
+                    
+                    if (data.test && data.questions) {
+                        // Новый формат с объектом test
+                        testTitle = data.test.title || '';
+                        totalQuestions = data.test.totalQuestions || 0;
+                        totalPossibleScore = data.test.totalPossibleScore || 0;
+                        questions = data.questions || [];
+                        
+                        // Автозаполнение названия
+                        if (autoTitleCheckbox.checked && testTitle) {
+                            testTitleInput.value = testTitle;
+                        }
+                    } else if (Array.isArray(data)) {
+                        // Старый формат - массив вопросов
+                        questions = data;
+                    } else {
+                        showStats(0, 0, 0, 0, 0, 0, '');
+                        statsPreview.classList.remove('visible');
+                        return;
+                    }
+                    
+                    // Показываем название теста
+                    document.getElementById('testTitleFromJson').textContent = testTitle || '—';
+                    
+                    if (!Array.isArray(questions) || questions.length === 0) {
+                        showStats(0, 0, 0, 0, 0, 0, testTitle);
                         statsPreview.classList.remove('visible');
                         return;
                     }
@@ -573,14 +666,17 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                     let skipped = 0;
                     let totalOptions = 0;
                     
-                    data.forEach(item => {
-                        // Проверяем наличие объекта question
-                        if (!item.question) {
-                            skipped++;
-                            return;
+                    questions.forEach(item => {
+                        // Поддержка двух форматов
+                        let q, options;
+                        if (item.question) {
+                            q = item.question;
+                            options = item.allOptions || [];
+                        } else {
+                            q = item;
+                            options = item.allOptions || item.options || [];
                         }
                         
-                        const q = item.question;
                         const qText = q.text || '';
                         
                         // Пропускаем служебные вопросы
@@ -590,7 +686,6 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                         }
                         
                         const type = q.type || 'radio';
-                        const options = item.allOptions || [];
                         
                         total++;
                         totalOptions += options.length;
@@ -602,12 +697,11 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                         } else if (type === 'short_text' || type === 'long_text' || type === 'text') {
                             text++;
                         } else {
-                            // Если тип не определен, считаем как single
                             single++;
                         }
                     });
                     
-                    showStats(total, single, multiple, text, skipped, totalOptions);
+                    showStats(total, single, multiple, text, skipped, totalOptions, testTitle);
                     statsPreview.classList.add('visible');
                     
                 } catch (e) {
@@ -615,13 +709,14 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                 }
             }
             
-            function showStats(total, single, multiple, text, skipped, options) {
+            function showStats(total, single, multiple, text, skipped, options, testTitle) {
                 document.getElementById('totalQuestions').textContent = total;
                 document.getElementById('singleQuestions').textContent = single;
                 document.getElementById('multipleQuestions').textContent = multiple;
                 document.getElementById('textQuestions').textContent = text;
                 document.getElementById('skippedQuestions').textContent = skipped;
                 document.getElementById('totalOptions').textContent = options;
+                document.getElementById('testTitleFromJson').textContent = testTitle || '—';
             }
             
             // Автоматический предпросмотр при изменении
@@ -629,6 +724,13 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
             jsonInput.addEventListener('input', function() {
                 clearTimeout(previewTimeout);
                 previewTimeout = setTimeout(updatePreview, 300);
+            });
+            
+            // Обновление при изменении чекбокса
+            autoTitleCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    updatePreview();
+                }
             });
             
             // Ручной предпросмотр по кнопке
@@ -651,6 +753,13 @@ $tests = $db->fetchAll("SELECT id, title FROM tests ORDER BY title ASC");
                 } catch (e) {
                     e.preventDefault();
                     alert('Ошибка в JSON: ' + e.message);
+                    return;
+                }
+                
+                const title = testTitleInput.value.trim();
+                if (!title && !autoTitleCheckbox.checked) {
+                    e.preventDefault();
+                    alert('Введите название теста или включите авто-определение');
                     return;
                 }
                 

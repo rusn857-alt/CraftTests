@@ -1,1486 +1,1558 @@
-[
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Средства для гигиены полости рта Stomatol создаются:"
-    },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Совместно с кафедрой стоматологии КГМУ",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "По образцу конкурентов",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Для тех у кого здоровые зубы без явных проблем",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "выпускаем дорогие пасты потому что средства в эконом сегменте у нас уже есть",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "По образцу конкурентов",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Для тех у кого здоровые зубы без явных проблем",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Совместно с кафедрой стоматологии КГМУ",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "выпускаем дорогие пасты потому что средства в эконом сегменте у нас уже есть",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
+{
+  "test": {
+    "id": "6a85b169eb614656728e11d5",
+    "title": "Тестирование Stomatol Дистрибуция СТМ",
+    "url": "https://forms.yandex.ru/admin/6a85b169eb614656728e11d5/edit",
+    "totalQuestions": 23,
+    "totalPossibleScore": 32
   },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "Какие комплексы входят в состав средств Stomatol? Отметьте все верные варианты."
+  "questions": [
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "short_text",
+        "typeLabel": "Короткий ответ",
+        "text": "ID Пользователя",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 0,
+        "correctCount": 0,
+        "incorrectCount": 0,
+        "totalScore": 0,
+        "maxPossibleScore": 0
+      },
+      "correctAnswers": [],
+      "incorrectAnswers": [],
+      "allOptions": []
     },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 3,
-      "incorrectCount": 2,
-      "totalScore": 3,
-      "maxPossibleScore": 3
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Средства для гигиены полости рта Stomatol создаются:",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Совместно с кафедрой стоматологии КГМУ",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "По образцу конкурентов",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Для тех у кого здоровые зубы без явных проблем",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "выпускаем дорогие пасты потому что средства в эконом сегменте у нас уже есть",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "По образцу конкурентов",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Для тех у кого здоровые зубы без явных проблем",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Совместно с кафедрой стоматологии КГМУ",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "выпускаем дорогие пасты потому что средства в эконом сегменте у нас уже есть",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Remineralization complex",
-        "score": 1,
-        "isCorrect": true
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "Какие комплексы входят в состав средств Stomatol? Отметьте все верные варианты.",
+        "isRequired": true
       },
-      {
-        "id": "1",
-        "text": "Recovery complex",
-        "score": 1,
-        "isCorrect": true
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 3,
+        "incorrectCount": 2,
+        "totalScore": 3,
+        "maxPossibleScore": 3
       },
-      {
-        "id": "1",
-        "text": "Triplefluorix complex",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Комплекс Wonderage",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Комплекс Prodew® 400",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "1",
-        "text": "Remineralization complex",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Комплекс Wonderage",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Recovery complex",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "1",
-        "text": "Triplefluorix complex",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Комплекс Prodew® 400",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Какой абразив не только очищает, но и реминерализует поверхность эмали?"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Remineralization complex",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Recovery complex",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Triplefluorix complex",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Комплекс Wonderage",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Комплекс Prodew® 400",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "1",
+          "text": "Remineralization complex",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Комплекс Wonderage",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Recovery complex",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Triplefluorix complex",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Комплекс Prodew® 400",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Какой абразив не только очищает, но и реминерализует поверхность эмали?",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Дикальций фосфат дигидрат",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Кальций карбонад",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Силика",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Сода",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Кальций карбонад",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Дикальций фосфат дигидрат",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Силика",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Сода",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Дикальций фосфат дигидрат",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Кальций карбонад",
-        "score": 0,
-        "isCorrect": false
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Верно ли утверждение что практически все продукты бренда Stomatol проходят исследования?",
+        "isRequired": true
       },
-      {
-        "id": "0",
-        "text": "Силика",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 3,
+        "correctCount": 1,
+        "incorrectCount": 2,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "0",
-        "text": "Сода",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Кальций карбонад",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Дикальций фосфат дигидрат",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Силика",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Сода",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Верно ли утверждение что практически все продукты бренда Stomatol проходят исследования?"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Верно, практически все продукты проходят клинические и лабораторные исследования",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Не верно, мы тестируем продукты только на фокусной группе на стадии производства",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Проводятся тестирования только на ускоренное старение продукта",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Не верно, мы тестируем продукты только на фокусной группе на стадии производства",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Верно, практически все продукты проходят клинические и лабораторные исследования",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Проводятся тестирования только на ускоренное старение продукта",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 3,
-      "correctCount": 1,
-      "incorrectCount": 2,
-      "totalScore": 1,
-      "maxPossibleScore": 1
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Перфтордекалин в составе средств Stomatol:",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "способствует быстрому заживлению и восстановлению тканей пародонта",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "является источником фтора и защищает от кариеса",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "является источником пре- и про- биотиков для восстановления правильной микробиоты в полости рта",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "реминеразирует и укрепляет эмаль",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "является источником фтора и защищает от кариеса",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "способствует быстрому заживлению и восстановлению тканей пародонта",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "является источником пре- и про- биотиков для восстановления правильной микробиоты в полости рта",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "реминеразирует и укрепляет эмаль",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Верно, практически все продукты проходят клинические и лабораторные исследования",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Не верно, мы тестируем продукты только на фокусной группе на стадии производства",
-        "score": 0,
-        "isCorrect": false
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "Какие кальцесодержащие компоненты входят в состав зубных паст Stomatol? Выберите несколько вариантов",
+        "isRequired": true
       },
-      {
-        "id": "0",
-        "text": "Проводятся тестирования только на ускоренное старение продукта",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Не верно, мы тестируем продукты только на фокусной группе на стадии производства",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 3,
+        "incorrectCount": 1,
+        "totalScore": 3,
+        "maxPossibleScore": 3
       },
-      {
-        "id": "1",
-        "text": "Верно, практически все продукты проходят клинические и лабораторные исследования",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Проводятся тестирования только на ускоренное старение продукта",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Перфтордекалин в составе средств Stomatol:"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Дикальций фосфат дигидрат",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Лактат кальция",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Гидроксиапатит",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Кальций карбонат",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "1",
+          "text": "Дикальций фосфат дигидрат",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Кальций карбонат",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Лактат кальция",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Гидроксиапатит",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Фториды в составе зубных паст Stomatol",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 3,
+        "correctCount": 1,
+        "incorrectCount": 2,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "являются одним из самых эффективных компонентов в борьбе с кариесом",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "не входят, так как являются вредным компонентом и могут оказывать пагубное влияние на организм взрослых и детей",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "осветляют эмаль и предотвращают скопление налета",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "не входят, так как являются вредным компонентом и могут оказывать пагубное влияние на организм взрослых и детей",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "являются одним из самых эффективных компонентов в борьбе с кариесом",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "осветляют эмаль и предотвращают скопление налета",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "способствует быстрому заживлению и восстановлению тканей пародонта",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "является источником фтора и защищает от кариеса",
-        "score": 0,
-        "isCorrect": false
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "В каких пастах Stomatol нет фторидов? Выберите несколько правильных ответов.",
+        "isRequired": true
       },
-      {
-        "id": "0",
-        "text": "является источником пре- и про- биотиков для восстановления правильной микробиоты в полости рта",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 2,
+        "incorrectCount": 3,
+        "totalScore": 2,
+        "maxPossibleScore": 2
       },
-      {
-        "id": "0",
-        "text": "реминеразирует и укрепляет эмаль",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "является источником фтора и защищает от кариеса",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "способствует быстрому заживлению и восстановлению тканей пародонта",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "является источником пре- и про- биотиков для восстановления правильной микробиоты в полости рта",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "реминеразирует и укрепляет эмаль",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "Какие кальцесодержащие компоненты входят в состав зубных паст Stomatol? Выберите несколько вариантов"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 4 Charcoal",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста детская 0-3 лет Baby",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 2 Calcium",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 7 Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 11 Bracket Systems",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 2 Calcium",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 4 Charcoal",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 7 Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 11 Bracket Systems",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста детская 0-3 лет Baby",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 3,
-      "incorrectCount": 1,
-      "totalScore": 3,
-      "maxPossibleScore": 3
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "За счет каких компонентов зубная паста№1 и №6 осветляют зубную эмаль? Выберите несколько правильных ответов",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 2,
+        "incorrectCount": 2,
+        "totalScore": 2,
+        "maxPossibleScore": 2
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Папаин",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "Лимонная кислота",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Соли калия",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Фториды",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Соли калия",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Папаин",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Фториды",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Лимонная кислота",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Дикальций фосфат дигидрат",
-        "score": 1,
-        "isCorrect": true
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Какое содержание фторидов в зубных пастах в обновленном дизайне?",
+        "isRequired": true
       },
-      {
-        "id": "1",
-        "text": "Лактат кальция",
-        "score": 1,
-        "isCorrect": true
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "1",
-        "text": "Гидроксиапатит",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Кальций карбонат",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "1",
-        "text": "Дикальций фосфат дигидрат",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Кальций карбонат",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Лактат кальция",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "1",
-        "text": "Гидроксиапатит",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Фториды в составе зубных паст Stomatol"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "1450 ррм",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "900 ррм",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "1000 ррм",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "2500 ррм",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "900 ррм",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "1000 ррм",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "1450 ррм",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "2500 ррм",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 3,
-      "correctCount": 1,
-      "incorrectCount": 2,
-      "totalScore": 1,
-      "maxPossibleScore": 1
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "В каких из нижеперечисленных паст Stomatol в составе есть Аминофторид входящий в комплекс Triplfluorix?",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 3,
+        "incorrectCount": 2,
+        "totalScore": 3,
+        "maxPossibleScore": 3
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 11 Bracket Systems",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста детская 2-12 лет Fluoride 1450ppm",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 12 Fluoride 5000 ppm",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста детская 6-12 лет Junior",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Гель для десен Восстанавливающий",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 11 Bracket Systems",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста детская 2-12 лет Fluoride 1450ppm",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста детская 6-12 лет Junior",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 12 Fluoride 5000 ppm",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Гель для десен Восстанавливающий",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "являются одним из самых эффективных компонентов в борьбе с кариесом",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "не входят, так как являются вредным компонентом и могут оказывать пагубное влияние на организм взрослых и детей",
-        "score": 0,
-        "isCorrect": false
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Текстура ополаскивателей для полости рта Stomatol",
+        "isRequired": true
       },
-      {
-        "id": "0",
-        "text": "осветляют эмаль и предотвращают скопление налета",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "не входят, так как являются вредным компонентом и могут оказывать пагубное влияние на организм взрослых и детей",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 2,
+        "correctCount": 1,
+        "incorrectCount": 1,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "1",
-        "text": "являются одним из самых эффективных компонентов в борьбе с кариесом",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "осветляют эмаль и предотвращают скопление налета",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "В каких пастах Stomatol нет фторидов? Выберите несколько правильных ответов."
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Гелевая",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Водная",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Водная",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Гелевая",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 2,
-      "incorrectCount": 3,
-      "totalScore": 2,
-      "maxPossibleScore": 2
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Заменяют ли пенки для полости рта чистку зубов пастой и щеткой?",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 2,
+        "correctCount": 1,
+        "incorrectCount": 1,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "не заменяют, это средства для дополнительной гигиены полости рта",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "заменяют, можно использовать вместо пасты и щетки",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "заменяют, можно использовать вместо пасты и щетки",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "не заменяют, это средства для дополнительной гигиены полости рта",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 4 Charcoal",
-        "score": 1,
-        "isCorrect": true
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "Выберите зубные пасты в состав которых входят соли калия, способствующие снижению чувствительности эмали и десен.",
+        "isRequired": true
       },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста детская 0-3 лет Baby",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 2 Calcium",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 2,
+        "incorrectCount": 3,
+        "totalScore": 2,
+        "maxPossibleScore": 2
       },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 7 Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 11 Bracket Systems",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 2 Calcium",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 4 Charcoal",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 7 Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 11 Bracket Systems",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста детская 0-3 лет Baby",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "За счет каких компонентов зубная паста№1 и №6 осветляют зубную эмаль? Выберите несколько правильных ответов"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 3 Sensitive",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 9 Ultra Effect",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 7 Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 8 Microbiome",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 10 Hyaluron",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 7 Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 8 Microbiome",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 3 Sensitive",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 10 Hyaluron",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 9 Ultra Effect",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 2,
-      "incorrectCount": 2,
-      "totalScore": 2,
-      "maxPossibleScore": 2
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "checkbox",
+        "typeLabel": "Несколько вариантов",
+        "text": "К отбеливающим зубным пастам относятся:",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 2,
+        "incorrectCount": 3,
+        "totalScore": 2,
+        "maxPossibleScore": 2
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 1 Whitening",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 4 Charcoal",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 10 Hyaluron",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 11 Bracket Systems",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 7 Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 10 Hyaluron",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 11 Bracket Systems",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 1 Whitening",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "1",
+          "text": "STOMATOL Зубная паста 4 Charcoal",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 7 Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Папаин",
-        "score": 1,
-        "isCorrect": true
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "В состав какой линейки входит такой компонент как Лизат лактобактерий, отвечающий за местный иммунитет в полости рта",
+        "isRequired": true
       },
-      {
-        "id": "1",
-        "text": "Лимонная кислота",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Соли калия",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 1,
+        "incorrectCount": 4,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "0",
-        "text": "Фториды",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Соли калия",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Папаин",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Фториды",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Лимонная кислота",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Какое содержание фторидов в зубных пастах в обновленном дизайне?"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Microbiome",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Ultra effect",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Calcium",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Sensitive",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Ultra effect",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Microbiome",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Extra Fresh",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Calcium",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Sensitive",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Какой компонент в пастах помогает бороться с сухостью слизистой(ксеростомией)?",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Гиалуроновая кислота",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Дикальцийфосфат дигидрат",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Перфтордекалин",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Папаин",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Дикальцийфосфат дигидрат",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Перфтордекалин",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Гиалуроновая кислота",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Папаин",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "1450 ррм",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "900 ррм",
-        "score": 0,
-        "isCorrect": false
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Перечислите все пасты, которые можно рекомендовать для решения проблемы сухости слизистой",
+        "isRequired": true
       },
-      {
-        "id": "0",
-        "text": "1000 ррм",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "0",
-        "text": "2500 ррм",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "900 ррм",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "1000 ррм",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "1450 ррм",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "2500 ррм",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "В каких из нижеперечисленных паст Stomatol в составе есть Аминофторид входящий в комплекс Triplfluorix?"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Все варианты верны",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 10 Hyaluron",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 5 Natural Therapy",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 6 Soft Whitening",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 10 Hyaluron",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 5 Natural Therapy",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "STOMATOL Зубная паста 6 Soft Whitening",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Все варианты верны",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 3,
-      "incorrectCount": 2,
-      "totalScore": 3,
-      "maxPossibleScore": 3
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Зубная паста STOMATOL 11 Bracket Systems рекомендуется для:",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 5,
+        "correctCount": 1,
+        "incorrectCount": 4,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Все варианты верны",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Только для тех кто носит брекеты",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Для тех имеет предрасположенность к развитию кариеса",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "При агрессивной форме кариеса",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Сухость слизистой",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Только для тех кто носит брекеты",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Для тех имеет предрасположенность к развитию кариеса",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "При агрессивной форме кариеса",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Сухость слизистой",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Все варианты верны",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 11 Bracket Systems",
-        "score": 1,
-        "isCorrect": true
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Почему детские пасты STOMATOL, детский гель для реминерализации имеют сладкий вкус?",
+        "isRequired": true
       },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста детская 2-12 лет Fluoride 1450ppm",
-        "score": 1,
-        "isCorrect": true
+      "summary": {
+        "totalOptions": 3,
+        "correctCount": 1,
+        "incorrectCount": 2,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 12 Fluoride 5000 ppm",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста детская 6-12 лет Junior",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Гель для десен Восстанавливающий",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 11 Bracket Systems",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста детская 2-12 лет Fluoride 1450ppm",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста детская 6-12 лет Junior",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 12 Fluoride 5000 ppm",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Гель для десен Восстанавливающий",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Текстура ополаскивателей для полости рта Stomatol"
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "В составе средств есть ксилит, который способствует реминерализации и защите от кариеса. Так же имеет сладковаты вкус",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "В состав введены сахоразаменители, для того чтобы вкус пасты был более привлекателен для детей",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Сладкий вкус за счет фруктово-ягодных отдушек",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "В состав введены сахоразаменители, для того чтобы вкус пасты был более привлекателен для детей",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "В составе средств есть ксилит, который способствует реминерализации и защите от кариеса. Так же имеет сладковаты вкус",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Сладкий вкус за счет фруктово-ягодных отдушек",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "summary": {
-      "totalOptions": 2,
-      "correctCount": 1,
-      "incorrectCount": 1,
-      "totalScore": 1,
-      "maxPossibleScore": 1
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Как и когда использовать реминерализующий гель (детский и взрослый)?",
+        "isRequired": true
+      },
+      "summary": {
+        "totalOptions": 3,
+        "correctCount": 1,
+        "incorrectCount": 2,
+        "totalScore": 1,
+        "maxPossibleScore": 1
+      },
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Наносим на предварительно почищенные зубы с помощью зубной щетки или в капы, 15-20 минут избегаем приема пищи и воды. Утром и/или вечером. Не выполаскивать средство после применения",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Наносим после еды на 20 минут, далее можно прополоскать рот",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Используем вместо зубной пасты утром и вечером",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Наносим после еды на 20 минут, далее можно прополоскать рот",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Наносим на предварительно почищенные зубы с помощью зубной щетки или в капы, 15-20 минут избегаем приема пищи и воды. Утром и/или вечером. Не выполаскивать средство после применения",
+          "score": 1,
+          "isCorrect": true
+        },
+        {
+          "id": "0",
+          "text": "Используем вместо зубной пасты утром и вечером",
+          "score": 0,
+          "isCorrect": false
+        }
+      ]
     },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Гелевая",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Водная",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Водная",
-        "score": 0,
-        "isCorrect": false
+    {
+      "question": {
+        "id": "ID не найден",
+        "type": "radio",
+        "typeLabel": "Один вариант",
+        "text": "Восстанавливающий гель для десен Sensitive:",
+        "isRequired": true
       },
-      {
-        "id": "1",
-        "text": "Гелевая",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Заменяют ли пенки для полости рта чистку зубов пастой и щеткой?"
-    },
-    "summary": {
-      "totalOptions": 2,
-      "correctCount": 1,
-      "incorrectCount": 1,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "не заменяют, это средства для дополнительной гигиены полости рта",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "заменяют, можно использовать вместо пасты и щетки",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "заменяют, можно использовать вместо пасты и щетки",
-        "score": 0,
-        "isCorrect": false
+      "summary": {
+        "totalOptions": 4,
+        "correctCount": 1,
+        "incorrectCount": 3,
+        "totalScore": 1,
+        "maxPossibleScore": 1
       },
-      {
-        "id": "1",
-        "text": "не заменяют, это средства для дополнительной гигиены полости рта",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "Выберите зубные пасты в состав которых входят соли калия, способствующие снижению чувствительности эмали и десен."
-    },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 2,
-      "incorrectCount": 3,
-      "totalScore": 2,
-      "maxPossibleScore": 2
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 3 Sensitive",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 9 Ultra Effect",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 7 Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 8 Microbiome",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 10 Hyaluron",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 7 Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 8 Microbiome",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 3 Sensitive",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 10 Hyaluron",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 9 Ultra Effect",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "checkbox",
-      "text": "К отбеливающим зубным пастам относятся:"
-    },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 2,
-      "incorrectCount": 3,
-      "totalScore": 2,
-      "maxPossibleScore": 2
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 1 Whitening",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 4 Charcoal",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 10 Hyaluron",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 11 Bracket Systems",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 7 Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 10 Hyaluron",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 11 Bracket Systems",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 1 Whitening",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "1",
-        "text": "STOMATOL Зубная паста 4 Charcoal",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 7 Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "В состав какой линейки входит такой компонент как Лизат лактобактерий, отвечающий за местный иммунитет в полости рта"
-    },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 1,
-      "incorrectCount": 4,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Microbiome",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Ultra effect",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Calcium",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Sensitive",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Ultra effect",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Microbiome",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Extra Fresh",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Calcium",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Sensitive",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Какой компонент в пастах помогает бороться с сухостью слизистой(ксеростомией)?"
-    },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Гиалуроновая кислота",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Дикальцийфосфат дигидрат",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Перфтордекалин",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Папаин",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Дикальцийфосфат дигидрат",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Перфтордекалин",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Гиалуроновая кислота",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Папаин",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Перечислите все пасты, которые можно рекомендовать для решения проблемы сухости слизистой"
-    },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Все варианты верны",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 10 Hyaluron",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 5 Natural Therapy",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 6 Soft Whitening",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 10 Hyaluron",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 5 Natural Therapy",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "STOMATOL Зубная паста 6 Soft Whitening",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Все варианты верны",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Зубная паста STOMATOL 11 Bracket Systems рекомендуется для:"
-    },
-    "summary": {
-      "totalOptions": 5,
-      "correctCount": 1,
-      "incorrectCount": 4,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Все варианты верны",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Только для тех кто носит брекеты",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Для тех имеет предрасположенность к развитию кариеса",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "При агрессивной форме кариеса",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Сухость слизистой",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Только для тех кто носит брекеты",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Для тех имеет предрасположенность к развитию кариеса",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "При агрессивной форме кариеса",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Сухость слизистой",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Все варианты верны",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Почему детские пасты STOMATOL, детский гель для реминерализации имеют сладкий вкус?"
-    },
-    "summary": {
-      "totalOptions": 3,
-      "correctCount": 1,
-      "incorrectCount": 2,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "В составе средств есть ксилит, который способствует реминерализации и защите от кариеса. Так же имеет сладковаты вкус",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "В состав введены сахоразаменители, для того чтобы вкус пасты был более привлекателен для детей",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Сладкий вкус за счет фруктово-ягодных отдушек",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "В состав введены сахоразаменители, для того чтобы вкус пасты был более привлекателен для детей",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "В составе средств есть ксилит, который способствует реминерализации и защите от кариеса. Так же имеет сладковаты вкус",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Сладкий вкус за счет фруктово-ягодных отдушек",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Как и когда использовать реминерализующий гель (детский и взрослый)?"
-    },
-    "summary": {
-      "totalOptions": 3,
-      "correctCount": 1,
-      "incorrectCount": 2,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Наносим на предварительно почищенные зубы с помощью зубной щетки или в капы, 15-20 минут избегаем приема пищи и воды. Утром и/или вечером. Не выполаскивать средство после применения",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Наносим после еды на 20 минут, далее можно прополоскать рот",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Используем вместо зубной пасты утром и вечером",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Наносим после еды на 20 минут, далее можно прополоскать рот",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Наносим на предварительно почищенные зубы с помощью зубной щетки или в капы, 15-20 минут избегаем приема пищи и воды. Утром и/или вечером. Не выполаскивать средство после применения",
-        "score": 1,
-        "isCorrect": true
-      },
-      {
-        "id": "0",
-        "text": "Используем вместо зубной пасты утром и вечером",
-        "score": 0,
-        "isCorrect": false
-      }
-    ]
-  },
-  {
-    "question": {
-      "id": "ID не найден",
-      "type": "radio",
-      "text": "Восстанавливающий гель для десен Sensitive:"
-    },
-    "summary": {
-      "totalOptions": 4,
-      "correctCount": 1,
-      "incorrectCount": 3,
-      "totalScore": 1,
-      "maxPossibleScore": 1
-    },
-    "correctAnswers": [
-      {
-        "id": "1",
-        "text": "Все утверждения верны",
-        "score": 1,
-        "isCorrect": true
-      }
-    ],
-    "incorrectAnswers": [
-      {
-        "id": "0",
-        "text": "Устраняет чрезмерную чувствительность",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Снимает воспаления и укрепляет ткани десен",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Способствует снижению кровоточивости десен",
-        "score": 0,
-        "isCorrect": false
-      }
-    ],
-    "allOptions": [
-      {
-        "id": "0",
-        "text": "Устраняет чрезмерную чувствительность",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Снимает воспаления и укрепляет ткани десен",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "0",
-        "text": "Способствует снижению кровоточивости десен",
-        "score": 0,
-        "isCorrect": false
-      },
-      {
-        "id": "1",
-        "text": "Все утверждения верны",
-        "score": 1,
-        "isCorrect": true
-      }
-    ]
-  }
-]
+      "correctAnswers": [
+        {
+          "id": "1",
+          "text": "Все утверждения верны",
+          "score": 1,
+          "isCorrect": true
+        }
+      ],
+      "incorrectAnswers": [
+        {
+          "id": "0",
+          "text": "Устраняет чрезмерную чувствительность",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Снимает воспаления и укрепляет ткани десен",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Способствует снижению кровоточивости десен",
+          "score": 0,
+          "isCorrect": false
+        }
+      ],
+      "allOptions": [
+        {
+          "id": "0",
+          "text": "Устраняет чрезмерную чувствительность",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Снимает воспаления и укрепляет ткани десен",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "0",
+          "text": "Способствует снижению кровоточивости десен",
+          "score": 0,
+          "isCorrect": false
+        },
+        {
+          "id": "1",
+          "text": "Все утверждения верны",
+          "score": 1,
+          "isCorrect": true
+        }
+      ]
+    }
+  ]
+}

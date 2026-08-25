@@ -1,5 +1,18 @@
 // Разрешаем вставку: введите "allow pasting" и нажмите Enter
 
+// === ПОЛУЧАЕМ НАЗВАНИЕ ТЕСТА ===
+const testTitleElement = document.querySelector('.EditableHeading-EditableText h1, .EditableHeading-EditableText .yc-editable-text__view');
+const testTitle = testTitleElement ? testTitleElement.innerText?.trim() : 'Тест без названия';
+
+// === ПОЛУЧАЕМ ID ФОРМЫ ===
+const formIdMatch = window.location.pathname.match(/\/([a-f0-9]+)\/edit/);
+const formId = formIdMatch ? formIdMatch[1] : 'ID не найден';
+
+console.log(`📝 Название теста: ${testTitle}`);
+console.log(`🔑 ID формы: ${formId}`);
+console.log('');
+
+// === СОБИРАЕМ ВОПРОСЫ ===
 const questions = [];
 
 // Ищем все блоки вопросов на странице
@@ -14,12 +27,23 @@ document.querySelectorAll('.BaseQuestion').forEach(block => {
     
     // Определяем тип вопроса
     let type = 'unknown';
+    let typeLabel = 'Неизвестный тип';
     if (block.querySelector('[data-qa="type-select"]')) {
         const typeText = block.querySelector('[data-qa="type-select"]')?.innerText || '';
-        if (typeText.includes('Короткий ответ')) type = 'short_text';
-        else if (typeText.includes('Один вариант')) type = 'radio';
-        else if (typeText.includes('Несколько вариантов')) type = 'checkbox';
+        if (typeText.includes('Короткий ответ')) {
+            type = 'short_text';
+            typeLabel = 'Короткий ответ';
+        } else if (typeText.includes('Один вариант')) {
+            type = 'radio';
+            typeLabel = 'Один вариант';
+        } else if (typeText.includes('Несколько вариантов')) {
+            type = 'checkbox';
+            typeLabel = 'Несколько вариантов';
+        }
     }
+    
+    // Проверяем, обязательный ли вопрос
+    const isRequired = block.querySelector('.BaseQuestion-RequiredSwitch .g-switch__control[checked]') !== null;
     
     // Ищем все варианты ответов
     const options = [];
@@ -69,13 +93,15 @@ document.querySelectorAll('.BaseQuestion').forEach(block => {
         }
     });
     
-    // Добавляем вопрос, только если есть варианты
-    if (options.length > 0) {
+    // Добавляем вопрос, только если есть варианты или это текстовый вопрос
+    if (options.length > 0 || type === 'short_text') {
         questions.push({
             question: {
                 id: questionId,
                 type: type,
-                text: questionText
+                typeLabel: typeLabel,
+                text: questionText,
+                isRequired: isRequired
             },
             summary: {
                 totalOptions: options.length,
@@ -91,19 +117,34 @@ document.querySelectorAll('.BaseQuestion').forEach(block => {
     }
 });
 
+// === ФОРМИРУЕМ ИТОГОВЫЙ JSON ===
+const testData = {
+    test: {
+        id: formId,
+        title: testTitle,
+        url: window.location.href,
+        totalQuestions: questions.length,
+        totalPossibleScore: questions.reduce((sum, q) => sum + q.summary.totalScore, 0)
+    },
+    questions: questions
+};
+
 // === ВЫВОД В КОНСОЛЬ В КРАСИВОМ ФОРМАТЕ ===
 
 console.log('═══════════════════════════════════════════════════');
-console.log('📊  АНАЛИЗ ТЕСТА: ВСЕ ВОПРОСЫ С ОТВЕТАМИ');
+console.log('📊  АНАЛИЗ ТЕСТА');
 console.log('═══════════════════════════════════════════════════');
-console.log(`📝 Всего вопросов: ${questions.length}`);
+console.log(`📝 Название: ${testTitle}`);
+console.log(`🔑 ID формы: ${formId}`);
+console.log(`📋 Всего вопросов: ${testData.test.totalQuestions}`);
+console.log(`🏆 Максимальный балл за весь тест: ${testData.test.totalPossibleScore}`);
 console.log('');
 
 questions.forEach((q, index) => {
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
     console.log(`❓ ВОПРОС ${index + 1}: ${q.question.text}`);
-    console.log(`📌 Тип: ${q.question.type}`);
-    console.log(`📌 ID: ${q.question.id}`);
+    console.log(`📌 Тип: ${q.question.typeLabel}`);
+    console.log(`📌 Обязательный: ${q.question.isRequired ? 'Да' : 'Нет'}`);
     console.log(`📊 Итого: ${q.summary.totalOptions} вариантов`);
     console.log(`✅ Правильных: ${q.summary.correctCount}`);
     console.log(`❌ Неправильных: ${q.summary.incorrectCount}`);
@@ -135,15 +176,17 @@ questions.forEach((q, index) => {
 });
 
 console.log('═══════════════════════════════════════════════════');
-console.log('📋 ВСЕ ДАННЫЕ В ФОРМАТЕ JSON (скопировано в буфер)');
+console.log('📋 ПОЛНЫЙ JSON (скопирован в буфер обмена)');
 console.log('═══════════════════════════════════════════════════');
 
 // Копируем полный JSON в буфер обмена
-const jsonResult = JSON.stringify(questions, null, 2);
+const jsonResult = JSON.stringify(testData, null, 2);
 if (navigator.clipboard) {
     navigator.clipboard.writeText(jsonResult).then(() => {
         console.log('✅ Полный JSON скопирован в буфер обмена!');
-        console.log(`📊 Всего вопросов: ${questions.length}`);
+        console.log(`📝 Название теста: ${testTitle}`);
+        console.log(`📊 Всего вопросов: ${testData.test.totalQuestions}`);
+        console.log(`🏆 Общий максимальный балл: ${testData.test.totalPossibleScore}`);
     }).catch(() => {
         console.log('📋 Скопируйте JSON вручную:');
         console.log(jsonResult);
