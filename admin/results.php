@@ -13,11 +13,12 @@ if (!$auth->isAuthenticated()) {
 $testId = (int)($_GET['test_id'] ?? 0);
 $sessionId = (int)($_GET['session_id'] ?? 0);
 $action = $_GET['action'] ?? '';
+$exportType = $_GET['export_type'] ?? 'summary';
 
 $db = Database::getInstance();
 $testManager = new TestManager();
 
-// Инициализируем переменные для избежания ошибок
+// Инициализируем переменные
 $questions = [];
 $groupedAnswers = [];
 $session = null;
@@ -36,8 +37,8 @@ if ($testId > 0) {
     $params[] = $testId;
 }
 
-if ($action === 'export' && $testId > 0) {
-    // Экспорт результатов в CSV
+// --- ОБРАБОТКА ЭКСПОРТА В CSV (СВОДКА) ---
+if ($action === 'export_csv' && $testId > 0) {
     $results = $db->fetchAll(
         "SELECT ts.id, ts.started_at, ts.completed_at, ts.total_score, ts.max_possible_score,
                 u.name as user_name, u.email as user_email, t.title as test_title
@@ -49,11 +50,12 @@ if ($action === 'export' && $testId > 0) {
         $params
     );
     
-    // Отправка CSV
     header('Content-Type: text/csv; charset=utf-8');
     header('Content-Disposition: attachment; filename="results_' . date('Y-m-d') . '.csv"');
     
     $output = fopen('php://output', 'w');
+    // BOM для Excel
+    fwrite($output, "\xEF\xBB\xBF");
     fputcsv($output, ['ID', 'Пользователь', 'Email', 'Тест', 'Баллы', 'Максимум', 'Процент', 'Дата']);
     
     foreach ($results as $row) {
@@ -64,11 +66,115 @@ if ($action === 'export' && $testId > 0) {
             $row['user_name'],
             $row['user_email'] ?? '',
             $row['test_title'],
-            $row['total_score'],
-            $row['max_possible_score'],
+            number_format($row['total_score'], 2),
+            number_format($row['max_possible_score'], 2),
             $percentage . '%',
             date('d.m.Y H:i', strtotime($row['completed_at']))
         ]);
+    }
+    fclose($output);
+    exit;
+}
+
+// --- ОБРАБОТКА ЭКСПОРТА ДЕТАЛЬНЫХ ОТВЕТОВ В CSV ---
+if ($action === 'export_details_csv' && $testId > 0) {
+    // Получаем все сессии для выбранного теста
+    $sessions = $db->fetchAll(
+        "SELECT ts.id, ts.user_id, ts.total_score, ts.max_possible_score,
+                u.name as user_name, u.email as user_email
+         FROM test_sessions ts
+         JOIN users u ON ts.user_id = u.id
+         WHERE ts.test_id = ? AND ts.status = 'completed'
+         ORDER BY ts.completed_at DESC",
+        [$testId]
+    );
+    
+    if (empty($sessions)) {
+        $_SESSION['message'] = 'Нет завершенных сессий для экспорта';
+        $_SESSION['message_type'] = 'warning';
+        redirect('/admin/results.php?test_id=' . $testId);
+    }
+    
+    // Получаем все вопросы теста
+    $questions = $db->fetchAll(
+        "SELECT q.* FROM questions q
+         WHERE q.test_id = ?
+         ORDER BY q.sort_order ASC, q.id ASC",
+        [$testId]
+    );
+    
+    header('Content-Type: text/csv; charset=utf-8');
+    header('Content-Disposition: attachment; filename="detailed_answers_' . date('Y-m-d') . '.csv"');
+    
+    $output = fopen('php://output', 'w');
+    fwrite($output, "\xEF\xBB\xBF");
+    
+    // Заголовки
+    $headers = ['Пользователь', 'Email'];
+    foreach ($questions as $q) {
+        $headers[] = mb_substr($q['text'], 0, 30) . (mb_strlen($q['text']) > 30 ? '...' : '');
+    }
+    $headers[] = 'Общий балл';
+    $headers[] = 'Максимум';
+    $headers[] = 'Процент';
+    fputcsv($output, $headers);
+    
+    // Данные
+    foreach ($sessions as $session) {
+        // Получаем ответы пользователя
+        $answers = $db->fetchAll(
+            "SELECT ua.*, q.type as question_type,
+                    ao.text as option_text
+             FROM user_answers ua
+             JOIN questions q ON ua.question_id = q.id
+             LEFT JOIN answer_options ao ON ua.answer_option_id = ao.id
+             WHERE ua.session_id = ?
+             ORDER BY q.sort_order ASC",
+            [$session['id']]
+        );
+        
+        // Группируем ответы по вопросам
+        $grouped = [];
+        foreach ($answers as $answer) {
+            $qId = $answer['question_id'];
+            if (!isset($grouped[$qId])) {
+                $grouped[$qId] = [];
+            }
+            $grouped[$qId][] = $answer;
+        }
+        
+        $row = [$session['user_name'], $session['user_email'] ?? ''];
+        
+        // Для каждого вопроса
+        foreach ($questions as $q) {
+            $answerText = '';
+            if (isset($grouped[$q['id']])) {
+                $userAnswers = $grouped[$q['id']];
+                if ($q['type'] === 'single') {
+                    $answerText = $userAnswers[0]['option_text'] ?? 'Нет ответа';
+                } elseif ($q['type'] === 'multiple') {
+                    $selected = array_filter($userAnswers, function($ua) {
+                        return $ua['option_text'] !== null;
+                    });
+                    $answerText = implode('; ', array_column($selected, 'option_text'));
+                    if (empty($answerText)) $answerText = 'Нет ответа';
+                } else {
+                    $answerText = $userAnswers[0]['answer_text'] ?? 'Нет ответа';
+                }
+            } else {
+                $answerText = 'Нет ответа';
+            }
+            $row[] = $answerText;
+        }
+        
+        // Баллы
+        $row[] = number_format($session['total_score'], 2);
+        $row[] = number_format($session['max_possible_score'], 2);
+        $percentage = $session['max_possible_score'] > 0 ? 
+                      round(($session['total_score'] / $session['max_possible_score']) * 100, 2) : 0;
+        $row[] = $percentage . '%';
+        
+        fputcsv($output, $row);
     }
     fclose($output);
     exit;
@@ -131,12 +237,10 @@ if ($sessionId > 0) {
         if (isset($groupedAnswers[$question['id']])) {
             $groupedAnswers[$question['id']]['question'] = $question;
             
-            // Определяем правильность ответа
             $questionType = $question['type'];
             $userAnswers = $groupedAnswers[$question['id']]['answers'];
             
             if ($questionType === 'single') {
-                // Для одиночного выбора
                 $optionId = $userAnswers[0]['answer_option_id'] ?? null;
                 if ($optionId) {
                     $option = $db->fetchOne(
@@ -146,7 +250,6 @@ if ($sessionId > 0) {
                     $groupedAnswers[$question['id']]['is_correct'] = $option && (bool)$option['is_correct'];
                 }
             } elseif ($questionType === 'multiple') {
-                // Для множественного выбора
                 $selectedIds = [];
                 foreach ($userAnswers as $ua) {
                     if ($ua['answer_option_id']) {
@@ -165,7 +268,6 @@ if ($sessionId > 0) {
                 
                 $groupedAnswers[$question['id']]['is_correct'] = ($selectedIds == $correctIds && !empty($correctIds));
             } else {
-                // Для текстовых и числовых ответов - всегда не правильно (оценивается вручную)
                 $groupedAnswers[$question['id']]['is_correct'] = false;
             }
         }
@@ -175,7 +277,7 @@ if ($sessionId > 0) {
 // Получение списка сессий
 $sql = "SELECT ts.id, ts.started_at, ts.completed_at, ts.total_score, ts.max_possible_score,
                u.name as user_name, u.email as user_email, t.title as test_title,
-               t.id as test_id
+               t.id as test_id, ts.user_id
         FROM test_sessions ts
         JOIN users u ON ts.user_id = u.id
         JOIN tests t ON ts.test_id = t.id
@@ -242,15 +344,6 @@ unset($_SESSION['message'], $_SESSION['message_type']);
             margin-top: 5px;
         }
         
-        .session-row {
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        .session-row:hover {
-            background: #f8f9fa;
-        }
-        
         .filter-form {
             display: flex;
             gap: 15px;
@@ -267,21 +360,104 @@ unset($_SESSION['message'], $_SESSION['message_type']);
             font-size: 14px;
             font-weight: 600;
             color: #2c3e50;
+            display: block;
+            margin-bottom: 4px;
         }
         
-        .filter-form .form-group select,
-        .filter-form .form-group input {
-            min-width: 200px;
+        .filter-form .form-group select {
+            min-width: 250px;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
         }
         
-        .export-btn {
-            margin-left: auto;
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
         }
         
-        /* Стили для деталей */
-        .session-details {
-            margin-top: 20px;
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            transition: background 0.2s;
         }
+        
+        .btn-success {
+            background: #28a745;
+            color: #fff;
+        }
+        .btn-success:hover {
+            background: #218838;
+        }
+        
+        .btn-info {
+            background: #17a2b8;
+            color: #fff;
+        }
+        .btn-info:hover {
+            background: #138496;
+        }
+        
+        .btn-secondary {
+            background: #6c757d;
+            color: #fff;
+        }
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        
+        .btn-secondary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .btn-sm {
+            padding: 4px 10px;
+            font-size: 12px;
+        }
+        
+        .btn-danger {
+            background: #dc3545;
+            color: #fff;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .table th,
+        .table td {
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        
+        .table th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .table-responsive {
+            overflow-x: auto;
+        }
+        
+        .alert {
+            padding: 12px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .alert-success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .alert-danger { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+        .alert-warning { background: #fff3cd; border: 1px solid #ffeeba; color: #856404; }
         
         .session-info {
             background: #f8f9fa;
@@ -349,7 +525,6 @@ unset($_SESSION['message'], $_SESSION['message_type']);
         .answer-item .status-icon {
             font-size: 20px;
             margin-left: 15px;
-            flex-shrink: 0;
         }
         
         .answer-item .multiple-options {
@@ -377,19 +552,24 @@ unset($_SESSION['message'], $_SESSION['message_type']);
             background: #f8d7da;
         }
         
+        .hint {
+            font-size: 12px;
+            color: #999;
+            align-self: center;
+        }
+        
         @media (max-width: 768px) {
             .filter-form {
                 flex-direction: column;
                 align-items: stretch;
             }
             
-            .filter-form .form-group select,
-            .filter-form .form-group input {
+            .filter-form .form-group select {
                 min-width: 100%;
             }
             
-            .export-btn {
-                margin-left: 0;
+            .export-buttons {
+                flex-direction: column;
             }
             
             .session-info {
@@ -557,8 +737,8 @@ unset($_SESSION['message'], $_SESSION['message_type']);
                     <div class="section">
                         <form method="GET" action="" class="filter-form">
                             <div class="form-group">
-                                <label for="test_id">Фильтр по тесту</label>
-                                <select id="test_id" name="test_id" class="form-control" onchange="this.form.submit()">
+                                <label for="test_id">📝 Фильтр по тесту</label>
+                                <select id="test_id" name="test_id" onchange="this.form.submit()">
                                     <option value="">Все тесты</option>
                                     <?php foreach ($tests as $test): ?>
                                         <option value="<?php echo $test['id']; ?>" <?php echo $testId == $test['id'] ? 'selected' : ''; ?>>
@@ -568,11 +748,24 @@ unset($_SESSION['message'], $_SESSION['message_type']);
                                 </select>
                             </div>
                             
-                            <?php if ($testId > 0): ?>
-                                <a href="results.php?action=export&test_id=<?php echo $testId; ?>" class="btn btn-success export-btn">
-                                    📥 Экспорт CSV
-                                </a>
-                            <?php endif; ?>
+                            <div class="export-buttons">
+                                <?php if ($testId > 0): ?>
+                                    <button type="submit" name="action" value="export_csv" class="btn btn-success">
+                                        📊 Сводка (CSV)
+                                    </button>
+                                    <button type="submit" name="action" value="export_details_csv" class="btn btn-info">
+                                        📋 Детальные ответы (CSV)
+                                    </button>
+                                <?php else: ?>
+                                    <button type="button" class="btn btn-secondary" disabled>
+                                        📊 Сводка (CSV)
+                                    </button>
+                                    <button type="button" class="btn btn-secondary" disabled>
+                                        📋 Детальные ответы (CSV)
+                                    </button>
+                                    <span class="hint">(выберите тест для экспорта)</span>
+                                <?php endif; ?>
+                            </div>
                         </form>
                         
                         <?php if (!empty($sessions)): ?>
