@@ -7,7 +7,6 @@ require_once '../config.php';
 
 $auth = new Auth();
 if (!$auth->isAuthenticated()) {
-    redirect('/admin/login.php');
 }
 
 $adminLogin = $_SESSION['admin_login'] ?? '';

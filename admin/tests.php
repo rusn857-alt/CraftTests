@@ -7,7 +7,6 @@ require_once '../config.php';
 
 $auth = new Auth();
 if (!$auth->isAuthenticated()) {
-    redirect('/admin/login.php');
 }
 
 $testManager = new TestManager();
@@ -25,7 +24,6 @@ if ($action === 'delete' && $testId > 0) {
         $_SESSION['message'] = 'Ошибка удаления теста';
         $_SESSION['message_type'] = 'danger';
     }
-    redirect('/admin/tests.php');
 }
 
 if ($action === 'status' && $testId > 0) {
@@ -37,7 +35,6 @@ if ($action === 'status' && $testId > 0) {
         $_SESSION['message'] = 'Ошибка изменения статуса';
         $_SESSION['message_type'] = 'danger';
     }
-    redirect('/admin/tests.php');
 }
 
 // Фильтр по статусу

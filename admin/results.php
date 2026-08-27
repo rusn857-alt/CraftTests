@@ -7,7 +7,6 @@ require_once '../config.php';
 
 $auth = new Auth();
 if (!$auth->isAuthenticated()) {
-    redirect('/admin/login.php');
 }
 
 $testId = (int)($_GET['test_id'] ?? 0);
@@ -89,7 +88,6 @@ if ($sessionId > 0) {
     if (!$session) {
         $_SESSION['message'] = 'Сессия не найдена';
         $_SESSION['message_type'] = 'danger';
-        redirect('/admin/results.php' . ($testId > 0 ? '?test_id=' . $testId : ''));
     }
     
     // Получаем все вопросы теста

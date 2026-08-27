@@ -7,7 +7,6 @@ require_once '../config.php';
 
 $auth = new Auth();
 if (!$auth->isAuthenticated()) {
-    redirect('/admin/login.php');
 }
 
 $db = Database::getInstance();
@@ -235,7 +234,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['import'])) {
             $_SESSION['message'] = $message;
             $_SESSION['message_type'] = $messageType;
             
-            redirect("/admin/tests.php");
             exit;
             
         } catch (Exception $e) {
