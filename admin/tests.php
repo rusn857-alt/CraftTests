@@ -219,7 +219,6 @@ unset($_SESSION['message'], $_SESSION['message_type']);
                     <li><a href="index.php">📊 Главная</a></li>
                     <li><a href="tests.php" class="active">📝 Тесты</a></li>
                     <li><a href="results.php">📈 Результаты</a></li>
-                    <li><a href="import_json.php">📈 Загрузить тест</a></li>
                 </ul>
             </div>
         </nav>

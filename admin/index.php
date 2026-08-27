@@ -73,7 +73,6 @@ $recentSessions = $db->fetchAll(
                     <li><a href="index.php" class="active">📊 Главная</a></li>
                     <li><a href="tests.php">📝 Тесты</a></li>
                     <li><a href="results.php">📈 Результаты</a></li>
-                    <li><a href="import_json.php">📈 Загрузить тест</a></li>
                 </ul>
             </div>
         </nav>

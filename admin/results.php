@@ -17,11 +17,6 @@ $action = $_GET['action'] ?? '';
 $db = Database::getInstance();
 $testManager = new TestManager();
 
-// Инициализируем переменные для избежания ошибок
-$questions = [];
-$groupedAnswers = [];
-$session = null;
-
 // Получаем список тестов для фильтра
 $tests = $db->fetchAll(
     "SELECT id, title FROM tests ORDER BY created_at DESC"
@@ -429,7 +424,6 @@ unset($_SESSION['message'], $_SESSION['message_type']);
                     <li><a href="index.php">📊 Главная</a></li>
                     <li><a href="tests.php">📝 Тесты</a></li>
                     <li><a href="results.php" class="active">📈 Результаты</a></li>
-                    <li><a href="import_json.php">📥 Загрузить тест</a></li>
                 </ul>
             </div>
         </nav>
@@ -477,7 +471,7 @@ unset($_SESSION['message'], $_SESSION['message_type']);
                         
                         <h3 style="margin-bottom: 15px;">📝 Ответы пользователя</h3>
                         
-                        <?php if (!empty($questions) && !empty($groupedAnswers)): ?>
+                        <?php if (!empty($groupedAnswers)): ?>
                             <?php foreach ($questions as $question): ?>
                                 <?php 
                                 $qData = $groupedAnswers[$question['id']] ?? null;
