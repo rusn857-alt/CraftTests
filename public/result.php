@@ -230,6 +230,7 @@ $passed = $maxScore > 0 && $percentage >= $passingScore;
                 </div>
             </div>
             <a href="index.php" class="btn-again">📚 К списку тестов</a>
+            <a href="/admin/index.php" class="btn-again">📚 Перейти в меню</a>
         </div>
         
         <?php if ($showResults && !empty($questions)): ?>

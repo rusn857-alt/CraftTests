@@ -124,6 +124,7 @@ $tests = $db->fetchAll(
         <div class="public-header">
             <h1>📚 Система тестирования</h1>
             <p>Выберите тест для прохождения</p>
+            <a href="/admin/index.php" class="btn-again">📚 Перейти в меню</a>
         </div>
         
         <?php if (empty($tests)): ?>
