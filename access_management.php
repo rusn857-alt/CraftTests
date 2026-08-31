@@ -1,5 +1,5 @@
 <?php
-// access_management.php - упрощенная версия с поиском
+// access_management.php - Управление доступом к тестам
 
 require_once __DIR__ . '/lib/Utils.php';
 require_once __DIR__ . '/lib/TestStorage.php';
@@ -8,14 +8,13 @@ require_once __DIR__ . '/lib/BitrixUserApi.php';
 
 $config = require __DIR__ . '/config.php';
 $storage = new TestStorage($config['data_dir']);
-$accessStorage = new AccessStorage($config['data_dir']);
 $bitrixApi = new BitrixUserApi($config['bitrix_webhook'], $config['paths']['cache'] ?? __DIR__ . '/cache');
+$accessStorage = new AccessStorage($config['data_dir'], $bitrixApi);
 
 $tests = $storage->getAllTests();
-$rules = $accessStorage->getAllRules();
 $structure = $bitrixApi->getCompanyStructure();
 
-// Получаем плоский список всех сотрудников и отделов для быстрого поиска
+// Получаем все элементы для поиска (сотрудники и отделы)
 $allItems = [];
 
 // Добавляем отделы
@@ -47,7 +46,7 @@ foreach ($structure['users'] ?? [] as $user) {
 $error = '';
 $success = '';
 
-// Обработка добавления правила
+// Обработка действий
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     $action = $_POST['action'];
     
@@ -75,7 +74,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             ];
             
             if ($accessStorage->saveRule($rule)) {
-                $success = 'Правило доступа добавлено!';
                 header('Location: access_management.php?added=1');
                 exit;
             } else {
@@ -84,9 +82,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
         }
     } elseif ($action === 'delete_rule') {
         $ruleId = $_POST['rule_id'] ?? '';
-        if ($accessStorage->deleteRule($ruleId)) {
-            header('Location: access_management.php?deleted=1');
-            exit;
+        if (!empty($ruleId)) {
+            $deleted = $accessStorage->deleteRule($ruleId);
+            if ($deleted) {
+                header('Location: access_management.php?deleted=1');
+                exit;
+            } else {
+                $error = 'Ошибка удаления правила';
+            }
+        } else {
+            $error = 'ID правила не указан';
         }
     } elseif ($action === 'clear_cache') {
         $bitrixApi->clearCache();
@@ -95,25 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     }
 }
 
-// Группировка правил по цели
-$rulesByTarget = [];
-foreach ($rules as $rule) {
-    $targets = $rule['targets'] ?? [];
-    foreach ($targets as $target) {
-        $key = $target['type'] . '_' . $target['id'];
-        if (!isset($rulesByTarget[$key])) {
-            $rulesByTarget[$key] = [
-                'target' => $target,
-                'tests' => []
-            ];
-        }
-        foreach ($rule['test_ids'] ?? [] as $testId) {
-            if (!in_array($testId, $rulesByTarget[$key]['tests'])) {
-                $rulesByTarget[$key]['tests'][] = $testId;
-            }
-        }
-    }
-}
+// Получаем правила для отображения
+$rulesForDisplay = $accessStorage->getRulesForDisplay();
 
 // Преобразуем данные для JavaScript
 $allItemsJson = json_encode($allItems, JSON_UNESCAPED_UNICODE);
@@ -230,16 +218,22 @@ header('Content-Type: text/html; charset=utf-8');
             border-radius: 8px;
             padding: 15px 20px;
             border-left: 4px solid #3498db;
+            transition: all 0.3s;
+        }
+        .rule-card:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .rule-card .target {
             font-weight: 600;
             color: #2c3e50;
             margin-bottom: 5px;
+            font-size: 1.05em;
         }
         .rule-card .target-type {
             font-size: 0.8em;
             color: #888;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .rule-card .tests-list {
             margin: 10px 0;
@@ -249,10 +243,15 @@ header('Content-Type: text/html; charset=utf-8');
             color: #555;
             margin-bottom: 3px;
         }
+        .rule-card .tests-list .test-name {
+            font-weight: 500;
+        }
         .rule-card .actions {
             margin-top: 10px;
             display: flex;
             gap: 8px;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
         }
         
         .split-view {
@@ -262,7 +261,7 @@ header('Content-Type: text/html; charset=utf-8');
         .left-panel { flex: 1; }
         .right-panel { flex: 1; }
         
-        /* Упрощенный поиск */
+        /* Поиск */
         .search-wrapper {
             position: relative;
         }
@@ -272,6 +271,7 @@ header('Content-Type: text/html; charset=utf-8');
             border: 1px solid #ddd;
             border-radius: 8px;
             font-size: 14px;
+            transition: border-color 0.3s;
         }
         .search-wrapper input:focus {
             border-color: #3498db;
@@ -338,6 +338,7 @@ header('Content-Type: text/html; charset=utf-8');
             background: #e8f0fe;
             border-radius: 8px;
             margin: 10px 0;
+            border: 1px solid #d4e4fc;
         }
         .selected-target .remove-target {
             cursor: pointer;
@@ -346,6 +347,10 @@ header('Content-Type: text/html; charset=utf-8');
             background: none;
             border: none;
             font-size: 1.2em;
+            padding: 0 5px;
+        }
+        .selected-target .remove-target:hover {
+            color: #c0392b;
         }
         
         .stats-grid {
@@ -369,26 +374,10 @@ header('Content-Type: text/html; charset=utf-8');
             color: #888;
         }
 
-        .loading-indicator {
-            display: none;
-            text-align: center;
-            padding: 10px;
-            color: #888;
-        }
-        .loading-indicator.active {
-            display: block;
-        }
-        .loading-indicator .spinner {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 2px solid #e8f0fe;
-            border-top-color: #3498db;
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-        }
-        @keyframes spin {
-            to { transform: rotate(360deg); }
+        .help-text {
+            font-size: 0.85em;
+            color: #999;
+            margin-top: 4px;
         }
 
         @media (max-width: 900px) {
@@ -396,7 +385,9 @@ header('Content-Type: text/html; charset=utf-8');
         }
         @media (max-width: 600px) {
             .header { flex-direction: column; text-align: center; gap: 10px; }
+            .header-actions { width: 100%; justify-content: center; }
             .rules-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
@@ -409,7 +400,7 @@ header('Content-Type: text/html; charset=utf-8');
             <a href="my_tests.php" class="btn btn-success">📋 Мои тесты</a>
             <form method="POST" style="display:inline;">
                 <input type="hidden" name="action" value="clear_cache">
-                <button class="btn btn-warning" onclick="return confirm('Обновить структуру компании из Битрикс?')">
+                <button class="btn btn-warning" onclick="return confirm('Обновить структуру компании из Битрикс? Это может занять некоторое время.')">
                     🔄 Обновить структуру
                 </button>
             </form>
@@ -444,7 +435,7 @@ header('Content-Type: text/html; charset=utf-8');
                 <div class="label">👤 Сотрудников</div>
             </div>
             <div class="stat-item">
-                <div class="num"><?= count($rules) ?></div>
+                <div class="num"><?= count($rulesForDisplay) ?></div>
                 <div class="label">📋 Правил</div>
             </div>
             <div class="stat-item">
@@ -473,15 +464,12 @@ header('Content-Type: text/html; charset=utf-8');
                                    placeholder="🔍 Введите имя сотрудника или название отдела..." 
                                    autocomplete="off">
                             <div class="search-results" id="searchResults"></div>
-                            <div class="loading-indicator" id="loadingIndicator">
-                                <span class="spinner"></span> Поиск...
-                            </div>
                         </div>
                     </div>
                     
                     <div id="selectedDisplay" class="selected-target" style="display:none;">
                         <span>✅ Выбран: <strong id="selectedLabel"></strong></span>
-                        <button type="button" class="remove-target" onclick="clearSelection()">✕</button>
+                        <button type="button" class="remove-target" onclick="clearSelection()" title="Очистить выбор">✕</button>
                     </div>
                     
                     <div class="form-group">
@@ -494,10 +482,12 @@ header('Content-Type: text/html; charset=utf-8');
                                 </option>
                             <?php endforeach; ?>
                         </select>
-                        <small class="help-text">Удерживайте Ctrl для выбора нескольких тестов</small>
+                        <div class="help-text">Удерживайте Ctrl (Cmd на Mac) для выбора нескольких тестов</div>
                     </div>
                     
-                    <button type="submit" class="btn btn-success">✅ Добавить правило</button>
+                    <button type="submit" class="btn btn-success" style="width: 100%; justify-content: center;">
+                        ✅ Добавить правило
+                    </button>
                 </form>
             </div>
         </div>
@@ -507,11 +497,15 @@ header('Content-Type: text/html; charset=utf-8');
             <div class="card">
                 <h3 class="card-title">📋 Существующие правила</h3>
                 
-                <?php if (empty($rulesByTarget)): ?>
-                    <p style="color: #999;">Нет настроенных правил доступа</p>
+                <?php if (empty($rulesForDisplay)): ?>
+                    <div style="text-align: center; padding: 40px 20px; color: #999;">
+                        <div style="font-size: 3em; margin-bottom: 10px;">📭</div>
+                        <p>Нет настроенных правил доступа</p>
+                        <p style="font-size: 0.9em;">Добавьте правило, чтобы предоставить доступ к тестам</p>
+                    </div>
                 <?php else: ?>
                     <div class="rules-grid">
-                        <?php foreach ($rulesByTarget as $key => $data): 
+                        <?php foreach ($rulesForDisplay as $key => $data): 
                             $target = $data['target'];
                             $targetTypeLabel = $target['type'] === 'user' ? '👤 Сотрудник' : '🏢 Отдел';
                             $testNames = [];
@@ -520,6 +514,9 @@ header('Content-Type: text/html; charset=utf-8');
                                     $testNames[] = $tests[$testId]['title'] ?? 'Без названия';
                                 }
                             }
+                            // Берем первый ID правила для удаления (если несколько - удаляем все)
+                            $ruleIds = $data['rule_ids'] ?? [];
+                            $firstRuleId = !empty($ruleIds) ? $ruleIds[0] : '';
                         ?>
                             <div class="rule-card">
                                 <div class="target">
@@ -528,10 +525,10 @@ header('Content-Type: text/html; charset=utf-8');
                                 <div class="target-type"><?= $targetTypeLabel ?></div>
                                 
                                 <div class="tests-list">
-                                    <strong>Доступные тесты:</strong>
+                                    <strong>📝 Доступные тесты:</strong>
                                     <ul>
                                         <?php foreach ($testNames as $name): ?>
-                                            <li><?= htmlspecialchars($name) ?></li>
+                                            <li><span class="test-name"><?= htmlspecialchars($name) ?></span></li>
                                         <?php endforeach; ?>
                                     </ul>
                                 </div>
@@ -539,11 +536,16 @@ header('Content-Type: text/html; charset=utf-8');
                                 <div class="actions">
                                     <form method="POST" style="display:inline;">
                                         <input type="hidden" name="action" value="delete_rule">
-                                        <input type="hidden" name="rule_id" value="<?= $key ?>">
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Удалить это правило?')">
+                                        <input type="hidden" name="rule_id" value="<?= htmlspecialchars($firstRuleId) ?>">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('🗑 Вы уверены, что хотите удалить это правило доступа?')">
                                             🗑 Удалить
                                         </button>
                                     </form>
+                                    <?php if (count($ruleIds) > 1): ?>
+                                        <span style="font-size: 0.75em; color: #888; align-self: center;">
+                                            (<?= count($ruleIds) ?> правил)
+                                        </span>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
@@ -583,16 +585,12 @@ function clearSelection() {
 
 function performSearch(query) {
     const results = document.getElementById('searchResults');
-    const loading = document.getElementById('loadingIndicator');
     
     if (!query || query.length < 2) {
         results.classList.remove('active');
         return;
     }
     
-    loading.classList.add('active');
-    
-    // Используем setTimeout для плавности
     clearTimeout(searchTimeout);
     searchTimeout = setTimeout(() => {
         const lowerQuery = query.toLowerCase().trim();
@@ -604,10 +602,8 @@ function performSearch(query) {
                 item.name.toLowerCase().includes(lowerQuery)) {
                 found.push(item);
             }
-            if (found.length >= 20) break; // Ограничиваем результат
+            if (found.length >= 20) break;
         }
-        
-        loading.classList.remove('active');
         
         if (found.length === 0) {
             results.innerHTML = '<div class="no-results">😕 Ничего не найдено</div>';
@@ -615,11 +611,13 @@ function performSearch(query) {
             let html = '';
             for (const item of found) {
                 const positionText = item.position ? ` (${item.position})` : '';
+                // Экранируем данные для безопасного вставления в HTML
+                const itemJson = JSON.stringify(item).replace(/"/g, '&quot;');
                 html += `
-                    <div class="result-item" onclick="selectItem(${JSON.stringify(item).replace(/"/g, '&quot;')})">
+                    <div class="result-item" onclick="selectItem(${itemJson})">
                         <span class="icon">${item.icon}</span>
-                        <span class="name">${item.name}</span>
-                        <span class="position">${positionText}</span>
+                        <span class="name">${escapeHtml(item.name)}</span>
+                        <span class="position">${escapeHtml(positionText)}</span>
                         <span class="type">${item.type_label}</span>
                     </div>
                 `;
@@ -628,7 +626,15 @@ function performSearch(query) {
         }
         
         results.classList.add('active');
-    }, 200);
+    }, 300);
+}
+
+// Функция экранирования HTML
+function escapeHtml(text) {
+    if (!text) return '';
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
 }
 
 // Поиск при вводе
@@ -639,7 +645,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 // Закрытие результатов при клике вне
 document.addEventListener('click', function(e) {
     const wrapper = document.querySelector('.search-wrapper');
-    if (!wrapper.contains(e.target)) {
+    if (wrapper && !wrapper.contains(e.target)) {
         document.getElementById('searchResults').classList.remove('active');
     }
 });
@@ -655,14 +661,17 @@ document.getElementById('searchInput').addEventListener('keydown', function(e) {
     }
 });
 
-// Предотвращаем зависание при большом количестве данных
-// Используем debounce для поиска
-let searchDebounce = null;
-document.getElementById('searchInput').addEventListener('input', function() {
-    clearTimeout(searchDebounce);
-    searchDebounce = setTimeout(() => {
-        performSearch(this.value);
-    }, 300);
+// Отмена выбора по Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        clearSelection();
+    }
+});
+
+// Инициализация - очищаем поле поиска при загрузке
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('searchInput').value = '';
+    document.getElementById('searchResults').classList.remove('active');
 });
 </script>
 </body>

@@ -1,17 +1,1 @@
-[
-    {
-        "targets": [
-            {
-                "type": "department",
-                "id": "2693",
-                "name": "Программисты Битрикс 24"
-            }
-        ],
-        "test_ids": [
-            "test_6a95645a77b50_33d1ef8c9a5ebe01",
-            "test_6a95650948bb3_2174a0216b2fa742"
-        ],
-        "created_at": "2026-08-31 13:58:25",
-        "id": "rule_6a956c61da40e"
-    }
-]
+[]
