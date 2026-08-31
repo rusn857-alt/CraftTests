@@ -1,0 +1,2778 @@
+{
+    "test_6a95645a77b50_33d1ef8c9a5ebe01": {
+        "id": "test_6a95645a77b50_33d1ef8c9a5ebe01",
+        "title": "Участок наладки. Уровень ПРОФИ",
+        "description": "Импортирован из JSON",
+        "status": "active",
+        "created_at": "2026-08-31 13:24:10",
+        "updated_at": "2026-08-31 13:24:23",
+        "form_id": "form_6a95645a77b6c",
+        "pages": [
+            {
+                "id": "page_1",
+                "title": "Страница 1",
+                "questions": [
+                    {
+                        "id": "q_1",
+                        "type": "single",
+                        "text": "На какой машине может фасоваться данный тип упаковки?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "Фасовочно-укупорочная",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Тубонаполнительная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Автомат саше",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Поршневой дозатор",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_2",
+                        "type": "single",
+                        "text": "На какой машине может фасоваться данный тип упаковки?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "Фасовочно-укупорочная",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Тубонаполнительная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Автомат саше",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Поршневой дозатор",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_3",
+                        "type": "single",
+                        "text": "На какой машине может фасоваться данный тип упаковки?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "Фасовочно-укупорочная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Тубонаполнительная",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Автомат саше",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Поршневой дозатор",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_4",
+                        "type": "single",
+                        "text": "На какой машине может фасоваться данный тип упаковки?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "Фасовочно-укупорочная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Тубонаполнительная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Автомат саше",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Поршневой дозатор",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_5",
+                        "type": "single",
+                        "text": "Как называется данный тип этикетки?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "вертикальная",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "круговая",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "горизонтальная",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_6",
+                        "type": "single",
+                        "text": "Как называется данный тип этикетки?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "вертикальная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "круговая",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "горизонтальная",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_7",
+                        "type": "single",
+                        "text": "Как называется тип этикетки на крышке банки?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "вертикальная",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "круговая",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "горизонтальная",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_8",
+                        "type": "single",
+                        "text": "На какой машине осуществляется фасовка в экструзионные тубы?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "ФМ 2",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ФМ 12",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 1",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 3",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_9",
+                        "type": "single",
+                        "text": "На какой машине может осуществляться автоматическая фасовка в пеналы и коробы?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "ФМ 2",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 12",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 1",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 3",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_10",
+                        "type": "single",
+                        "text": "Какой узел на ФМ 7 расположен раньше?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "обнаружение",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "дозирование",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_11",
+                        "type": "single",
+                        "text": "Какой узел ФМ 13 отсутствует на ФМ 5?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "обдув",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_12",
+                        "type": "single",
+                        "text": "На каком этапе происходит отсоединение спутника на ФМ 5?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "переноски",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "выталкивание",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "дозировка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_13",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 13. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "нанесение этикетки",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ориентация",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "дозировка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обдув",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_14",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 13. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "обдув",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "установка крышки",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_15",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 13. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "переноска",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "установка флакона",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_16",
+                        "type": "single",
+                        "text": "На какой машине два этапа заталкивания тубы?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "ФМ 2",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ФМ 12",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 6",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 15",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_17",
+                        "type": "single",
+                        "text": "Какой узел следует после запаивания шва?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "датировка",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "обрезка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентация",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "выталкивание",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_18",
+                        "type": "single",
+                        "text": "Через какой узел проходит туба перед запаиванием на ФМ 3?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "формирование шва",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ориентации",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "дозирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_19",
+                        "type": "single",
+                        "text": "Какой узел проходит туба перед началом дозирования п\/ф на всех тубонаполнительных машинах?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "ориентации",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "заталкивания",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружения",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обрезки",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_20",
+                        "type": "single",
+                        "text": "Какой узел есть на всех фасовочных машинах в цехе?",
+                        "required": true,
+                        "points": 4,
+                        "options": [
+                            {
+                                "text": "дозирование",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "переноска",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "нанесение этикетки",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_21",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 10. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "дозирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_22",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 7. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "дозирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_23",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 5. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "дозирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_24",
+                        "type": "single",
+                        "text": "Перед вами схема расположения узлов на ФМ 5. Какой узел отмечен знаком вопроса?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "дозирование",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "запрессовка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "завинчивание",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_25",
+                        "type": "single",
+                        "text": "Схема какой машины изображена ниже?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "ФМ 12",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ФМ 3",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 1",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 2",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_26",
+                        "type": "single",
+                        "text": "Схема какой машины изображена ниже?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "ФМ 12",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 3",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ФМ 14",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 2",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_27",
+                        "type": "single",
+                        "text": "Схема какой машины изображена ниже?",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "ФМ 12",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 1",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 6",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ФМ 2",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_28",
+                        "type": "single",
+                        "text": "Какой этап фасовки изображен на фото?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "датирование",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "обрезка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "запайка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_29",
+                        "type": "single",
+                        "text": "Какой этап фасовки изображен на фото?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "датирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обрезка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "запайка",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_30",
+                        "type": "single",
+                        "text": "Какой этап фасовки изображен на фото?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "датирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обрезка",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "запайка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_31",
+                        "type": "single",
+                        "text": "Какой этап фасовки изображен на фото?",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "заталкивание",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "дозирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ориентирование",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "обнаружение",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "test_6a95650948bb3_2174a0216b2fa742": {
+        "id": "test_6a95650948bb3_2174a0216b2fa742",
+        "title": "Тест по регламенту дистрибуция СТМ",
+        "description": "Импортирован из JSON",
+        "status": "active",
+        "created_at": "2026-08-31 13:27:05",
+        "updated_at": "2026-08-31 13:27:05",
+        "form_id": "form_6a95650948bcb",
+        "pages": [
+            {
+                "id": "page_1",
+                "title": "Страница 1",
+                "questions": [
+                    {
+                        "id": "q_1",
+                        "type": "single",
+                        "text": "1. Какой из следующих вариантов считается качественным лидом?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Тот, где у клиента есть конкретный запрос",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Спам-рассылка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Обращение от бота",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Опрос населения",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_2",
+                        "type": "single",
+                        "text": "2. Прочитайте утверждение. Истинно оно или ложно?\n\n“Некачественный лид всегда должен быть закрыт под соответствующим статусом с указанием причины закрытия”",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Истинно",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Ложно",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_3",
+                        "type": "single",
+                        "text": "3. Какой статус автоматически присваивается лиду, если он только что поступил и еще не обработан? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "В работе",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не обработан",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Забракованный",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Закрытый",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_4",
+                        "type": "single",
+                        "text": "4. Почему важно исключить орфографические, речевые и пунктуационные ошибки в общении с клиентом?\n\nВыберите 1 верный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Потому что нужно писать и говорить правильно, чтобы было красиво",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Потому что ошибки могут сказаться на имидже менеджера и компании",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Потому что руководитель наругает, если увидит ошибку",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не знаю, я пишу как получается",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_5",
+                        "type": "single",
+                        "text": "5. Какие действия нужно предпринять, если лид пришел от существующего клиента?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Сразу создать сделку",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Передать лид ответственному за работу с этим клиентом менеджеру",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Передать лид руководителю",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_6",
+                        "type": "single",
+                        "text": "6. Что необходимо сделать при получении нового лида?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Сразу закрыть его как некачественный~",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Позвонить по номеру телефона или ответить на электронное письмо",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Игнорировать, если он пришел на общую почту",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Передать лид другому менеджеру без обработки",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_7",
+                        "type": "single",
+                        "text": "7. Что должен сделать временно отсутствующий менеджер перед своим уходом в отпуск\/на больничный?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Закрыть все свои сделки",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Предоставить доступ к своей рабочей почте замещающему сотруднику",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Игнорировать свои обязанности",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Убедиться, что все клиенты довольны",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_8",
+                        "type": "single",
+                        "text": "8. Прочитайте утверждение. Истинно оно или ложно?\n\n“Замещающий менеджер должен менять ответственного в сделках своего коллеги”",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Истинно",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Ложно",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_9",
+                        "type": "single",
+                        "text": "9. Как замещающий менеджер должен отслеживать сделки своего коллеги во время его отсутствия? \n\nВыберите 1 правильный вариант ответа",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Менять ответственного в сделке на себя",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Постоянно листать все сделки в канбане",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Приостановить ведение своих сделок на время ведения сделок коллеги",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Выставлять фильтр в CRM  и смотреть сделки отсутствующего коллеги и свои",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_10",
+                        "type": "single",
+                        "text": "10. Какой комментарий должен оставить руководитель при согласовании замещения? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "\"Согласовано\"",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "\"Не согласовано\"",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "\"Работаем дальше\"",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "\"Успехов в работе\"",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_11",
+                        "type": "single",
+                        "text": "11. Прочитайте утверждение. Истинно оно или ложно?\n\n\n\n“Если менеджер находится в командировке, его обязанности могут выполнять только сотрудники из его отдела”.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Истинно",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Ложно",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_12",
+                        "type": "single",
+                        "text": "12. Что должен сделать заменяющий менеджер после возвращения коллеги на рабочее место? Выберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "“Вернуть\" всех клиентов, которые были под его ответственностью во время отсутствия коллеги",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Устроить дуэль за начатые сделки с клиентами коллеги",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Убрать доступ к своей почте у замещающего коллеги",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_13",
+                        "type": "single",
+                        "text": "13. Прочитайте утверждение. Истинно оно или ложно?\n\n“Менеджер может обращаться к клиенту на \"ты\", если они уже знакомы” или давно работают вместе”.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Истинно",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Ложно",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_14",
+                        "type": "single",
+                        "text": "14. Что необходимо сделать при проверке на дубли? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Проверить номер телефона и почту на наличие дубликатов",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Записать номер телефона в отдельный документ",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Удалить все дубликаты из базы",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Позвонить всем клиентам",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_15",
+                        "type": "single",
+                        "text": "15. Какой статус ставится, если клиент не отвечает на звонки? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Спам",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не выходит на контакт",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Не наш клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Дубль",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_16",
+                        "type": "single",
+                        "text": "16. Какие действия необходимо предпринять при изменении статуса лида на \"В работе\"?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Создать сделку",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Поставить актуальное дело",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Закрыть лид",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Перевести лид на коллегу",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_17",
+                        "type": "single",
+                        "text": "17. Что должно содержаться в комментарии к забракованному лиду во всплывающем поле? \n\nВыберите 1 верный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Описание всей проведенной работы с клиентом",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Список продукции, которую хотел заказать клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Краткая причина, почему данный лид был забракован",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Ссылка на созданную с этим клиентом сделку",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_18",
+                        "type": "single",
+                        "text": "18. Какой статус присваивается, если клиент не выходит на контакт при прозвоне по регламенту? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Закрыт",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Дубль",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не выходит на контакт",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Обработан",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_19",
+                        "type": "multiple",
+                        "text": "19. Какие из следующих действий с лидом необходимо выполнить на этапе \"Не обработан\"? \n\nВыберите все подходящие варианты.",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "Совершить исходящий звонок",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Изучить информацию по заявке",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Начать изучать историю компании-клиента",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Проигнорировать заявку",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_20",
+                        "type": "single",
+                        "text": "20. Какой максимальный промежуток времени менеджер может установить для повторного касания по лиду? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "1 месяц",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "2 месяца",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "3 месяца",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "6 месяцев",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_21",
+                        "type": "single",
+                        "text": "21. Сколько попыток связи с клиентом менеджер должен сделать по регламенту по прошествии двух месяцев после закрытия лида под статусом “не выходит на контакт”? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "1",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "2",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "3",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Дозваниваться, пока не дозвонится.",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_22",
+                        "type": "single",
+                        "text": "22. Какой срок для внесения итогов разговора в СRM по заявке? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "В течение 30 минут",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В течение 1 часа",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В течение 15 минут",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Передать лид другому менеджеру",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_23",
+                        "type": "single",
+                        "text": "23. Соотнесите указанное действие с временным диапазоном, выбрав 1 правильный ответ.\n\nДействие: \"Просмотр заявок, пришедших с 18:00 до 9:00\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "В течение 1 часа",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В первой половине рабочего дня",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "3 раза в день",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В течение 15 минут с момента разговора с клиентом",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_24",
+                        "type": "single",
+                        "text": "24. Какой элемент должен стоять на каждой карточке компании, если по ней нет текущей сделки? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Логотип компании",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Краткое описание",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Дело на следующее касание",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Примечание",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_25",
+                        "type": "single",
+                        "text": "25. Что должен сделать менеджер при создании новой карточки компании? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Заполнить только название компании",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Заполнить все поля в компании и\/или контакте",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Игнорировать создание карточки",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Создать только карточку компании",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_26",
+                        "type": "single",
+                        "text": "26. Какой статус присваивается компании клиента, которая больше не функционирует? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Новый клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Ликвидирован",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Нецелевой клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Конкурент клиента",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_27",
+                        "type": "single",
+                        "text": "27. Почему важно качественно заполнять карточку компании\/клиента? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Для улучшения визуального оформления CRM",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Чтобы снизить количество переписок",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Для проведения рассылок и аналитики клиентской базы",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Для увеличения объема продаж без связи с клиентами",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_28",
+                        "type": "single",
+                        "text": "28. Как должна быть названо сделка согласно внутренним правилам? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "ИП Иванов",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "ИП Иванов ноябрь 2024",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Сделка с ИП Ивановым",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Сделка Ноябрь 2024",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_29",
+                        "type": "single",
+                        "text": "29. Соотнесите указанное действие с временным диапазоном, выбрав 1 правильный ответ.\n\nДействие: \"Внесение итогов разговора\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "В течение 1 часа",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В первой половине рабочего дня",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "3 раза в день",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В течение 15 минут с момента разговора",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_30",
+                        "type": "single",
+                        "text": "30. Что происходит с клиентской базой в Б24, если с ней качественно работать? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Она автоматически обновляется каждый день",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Она формируется при занесении контактов и компаний менеджерами и служит вспомогательным инструментом для аналитики, расширения зоны покрытия компании и увеличением количества продаж",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Она создается только раз в месяц",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Она не подлежит обновлению после первого создания",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_31",
+                        "type": "single",
+                        "text": "31. Какую роль играют качественно заполненные карточки в работе менеджеров и руководства? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Увеличивают время обработки заявок",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Упрощают аналитику, планирование и расширение продаж",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Не оказывают существенного влияния",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Помогают в сокращении штата",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_32",
+                        "type": "single",
+                        "text": "32. Сопоставьте описание закрытия сделки с его статусом, выбрав 1 правильный вариант ответа.\n\nОписание: \"Клиент не готов работать по предоплате\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Нет товара на складе",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не прошли по отсрочке\/реализация",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Маленький объем заказа",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не устраивает качество и внешний вид продукции",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_33",
+                        "type": "single",
+                        "text": "33. Сопоставьте описание закрытия сделки с его статусом, выбрав 1 правильный вариант ответа.\n\nОписание: \"Сделка закрывается из-за недостатка товара на складе\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Оплачено и получено клиентом",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не прошли по отсрочке\/реализация",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Маленький объем заказа",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Нет товара на складе",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_34",
+                        "type": "single",
+                        "text": "34. Какой тип клиента описывается как клиент, с которым есть более одной успешной сделки? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Новый клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Сработавший клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Постоянный клиент",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Ликвидирован",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_35",
+                        "type": "single",
+                        "text": "35. Какой тип клиента описывается как клиент, который может сотрудничать с нами только на тендерных условиях?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Постоянный",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Нецелевой клиент",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Новый",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Тендеры",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_36",
+                        "type": "single",
+                        "text": "36. Какой комментарий должен быть написан после телефонного разговора с клиентом? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Что такое комментарий к звонку?",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Комментарий с указанием, на каком этапе находится сделка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Краткое содержание и итог диалога",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Ничего не писать и не тратить рабочее время",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_37",
+                        "type": "single",
+                        "text": "37. Когда менеджер должен передать клиента в другой отдел? \n\nВыберите 1 верный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "При первом контакте с клиентом",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Если клиент изъявил желание работать в другом формате",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Когда сделка закрыта",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Если клиент не отвечает на звонки",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_38",
+                        "type": "single",
+                        "text": "38. Что делать с просроченными делами и задачами в сделке? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Оставить их",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Удалить",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Должны быть выполнены и поставлена галочка (\"обработан\")",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Написать в сделке, почему они не сделаны",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_39",
+                        "type": "single",
+                        "text": "39. Соотнесите название этапа сделки в воронке новых клиентов с его описанием, выбрав 1 правильный вариант ответа.\n\nОписание: \"Сделка висит здесь пока клиент не посмотрит КП\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Новая сделка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Сборка и погрузка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Согласование заказа, счёт",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "КП отправлено",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_40",
+                        "type": "single",
+                        "text": "40. Что нужно сделать менеджеру, если при звонке клиенту согласно поставленному делу он не дозванивается? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Поставить новую дату дела и попробовать перезвонить в этот день",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Продолжать дозваниваться дальше",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Оставить попытки дозвониться до клиента",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Отправить клиенту гневное сообщение",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_41",
+                        "type": "single",
+                        "text": "41. Какое количество попыток дозвона менеджер должен предпринять в течение недели, если клиент не отвечает?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "5-7",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "10",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "8",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "1-2",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_42",
+                        "type": "single",
+                        "text": "42. Что обязательно должно быть зафиксировано в сделке? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Тема разговора",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Код клиента",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Список товаров",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Все контакты (звонки, переписки) с клиентом",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_43",
+                        "type": "single",
+                        "text": "43. Сколько времени отводится на согласование заказа? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "1 день",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "2-3 дня",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "7 дней",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "1 месяц",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_44",
+                        "type": "single",
+                        "text": "44. Какой комментарий должен оставить менеджер, передавший клиента в другой отдел? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Клиент не хочет с нами работать, попробуйте вы",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Мы не смогли помочь клиенту, попробуйте вы",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Клиент не хочет покупать по цене для дистрибьютора",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Клиент передан в отдел ... по причине изменений условий сотрудничества",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_45",
+                        "type": "single",
+                        "text": "45. Сделка закрывается под статусом \"Не вышел на связь\" только тогда, когда менеджер пробовал связаться с клиентом всеми доступными способами, включая ______, ______ и ______ (если все виды связи доступны).\n\nВыберите 1 вариант ответа, где верно указаны все три пропуска.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Звонок, мессенджер, письмо на электронную почту",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Звонок, заказное письмо, мессенджер",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Звонок, мессенджер, письмо на личную почту",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Мессенджер, письмо на электронную почту, письмо директору компании",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_46",
+                        "type": "single",
+                        "text": "46. Соотнесите название этапа сделки в воронке новых клиентов с его описанием, выбрав 1 правильный вариант ответа.\n\nОписание: \"На данном этапе сделка находится пока с клиентом заключается и подписывается договор о сотрудничестве\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Контроль доставки",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Согласование заказа, счёт",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Согласование условий",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Регистрация договора",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_47",
+                        "type": "single",
+                        "text": "47. При поступлении товара на склад менеджер должен ______ контрагенту и дополнить заказ.\n\nВыберите 1 верный вариант ответа для пропуска.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Отправить письмо голубиной почтой",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Позвонить",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Послать СМС",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Ничего не говорить",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_48",
+                        "type": "single",
+                        "text": "48. Когда менеджер должен осуществить первый звонок новому клиенту? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "После отправки коммерческого предложения",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "До отправки коммерческого предложения",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Через неделю после отправки КП",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Через месяц после отправки КП",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_49",
+                        "type": "single",
+                        "text": "49. Какой срок установлен для второго звонка клиенту после отправки КП? \n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Через 1 день",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Через 3 дня",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Через неделю",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Через 10 дней",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_50",
+                        "type": "single",
+                        "text": "50. Выберите название статуса, подходящее под его описание: \n\n\"Недозвон по контакту в течение срока по регламенту\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Неверно указан номер",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Дубль",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не выходит на контакт",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "СПАМ",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_51",
+                        "type": "single",
+                        "text": "51. Какую форму передачи должен использовать менеджер, когда передает клиента в другой отдел?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Устный разговор",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Письмо на рабочую электронную почту по шаблону",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Сообщение в мессенджере",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Личную встречу",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_52",
+                        "type": "single",
+                        "text": "52. Соотнесите указанное действие с временным диапазоном, выбрав 1 правильный ответ.\n\nДействие: \"Прозвон текущих заявок\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "В течение 1 часа",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "В первой половине рабочего дня",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "3 раза в день",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "В течение 15 минут с момента разговора",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_53",
+                        "type": "single",
+                        "text": "53. Выберите название статуса, подходящее под его описание: \n\n\"Позиции товара не существует\/невозможно произвести\/закупить\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Не выходит на контакт",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "СПАМ",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Неверно указан номер",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не наш клиент",
+                                "is_correct": true
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_54",
+                        "type": "single",
+                        "text": "54. Что должен сделать новый ответственный менеджер после получения информации о клиенте из другого отдела?\n\nВыберите 1 правильный вариант ответа.",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Закрыть сделку сразу",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Игнорировать клиента",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Завести свою сделку и связаться с клиентом",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Передать клиента дальше",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_55",
+                        "type": "single",
+                        "text": "55. Выберите название статуса, подходящее под его описание: \n\n\"Массовая рассылка информации\".",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Дубль",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Неверно указан номер",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "СПАМ",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Не наш клиент",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_56",
+                        "type": "multiple",
+                        "text": "56. Что должно быть указано в письме, отправляемом новому ответственному менеджеру при передаче клиента? \n\nВыберите все верные варианты ответа.",
+                        "required": true,
+                        "points": 3,
+                        "options": [
+                            {
+                                "text": "Название компании",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "ИНН компании",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Темы, которые уже успели обсудить",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Контактное лицо",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Негативный опыт работы клиента с другим поставщиком",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_57",
+                        "type": "multiple",
+                        "text": "57. Что должен делать менеджер, если клиент не отвечает на звонки в течение месяца? \n\nВыберите все правильные варианты ответа.",
+                        "required": true,
+                        "points": 2,
+                        "options": [
+                            {
+                                "text": "Закрыть сделку под статусом \"не вышел на связь\"",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Оставить клиента в покое",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Оставить сделку открытой и продолжать звонить, если это не мешает",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Отправить клиенту гневное письмо",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_58",
+                        "type": "single",
+                        "text": "58. Соотнесите название этапа сделки в воронке новых клиентов с его описанием, выбрав 1 правильный вариант ответа.\n\nОписание: \"Необходимо проконтролировать доставку товара\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Сборка и погрузка",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Контроль доставки",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "КП отправлено",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Регистрация договора",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    },
+                    {
+                        "id": "q_59",
+                        "type": "single",
+                        "text": "59. Сопоставьте описание закрытия сделки с его статусом, выбрав 1 правильный вариант ответа.\n\nОписание: \"Клиент недоволен качеством продукции\"",
+                        "required": true,
+                        "points": 1,
+                        "options": [
+                            {
+                                "text": "Нет товара на складе",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не прошли по отсрочке\/реализация",
+                                "is_correct": false
+                            },
+                            {
+                                "text": "Не устраивает качество и внешний вид продукции",
+                                "is_correct": true
+                            },
+                            {
+                                "text": "Оплачено и получено клиентом",
+                                "is_correct": false
+                            }
+                        ],
+                        "max_rating": 5,
+                        "min": 1,
+                        "max": 10,
+                        "min_label": "",
+                        "max_label": "",
+                        "image": ""
+                    }
+                ]
+            }
+        ]
+    }
+}

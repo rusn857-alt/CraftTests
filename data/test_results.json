@@ -1,0 +1,24 @@
+[
+    {
+        "test_id": "test_6a9563dd55154_ec8467caf41d9f13",
+        "test_title": "123",
+        "answers": [
+            {
+                "question": "123",
+                "user_answer": "(не указан)",
+                "correct_answer": "1",
+                "score": 0,
+                "max_score": 1,
+                "is_correct": false,
+                "type": "single"
+            }
+        ],
+        "score": 0,
+        "max_score": 1,
+        "status": "failed",
+        "score_percent": 0,
+        "created_at": "2026-08-31 13:22:13",
+        "employee_id": "0",
+        "id": "test_6a9563e520dc4_5b0703e287fcbeef"
+    }
+]
